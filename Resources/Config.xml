@@ -2,10 +2,7 @@
 <root>
   <Directories>
     <serverin>sample</serverin>
-    <clientin>out\server_table</clientin>
-    <commonin>..\..\client\Assets\Resources\lua\Table</commonin>
+    <clientin>out\json</clientin>
+    <commonin>out\lua</commonin>
   </Directories>
-  <Settings>
-    <username>用户名</username>
-  </Settings>
 </root>
