@@ -53,6 +53,7 @@ namespace Convert
                         {
                             lastWriteTime = 0;
                         }
+                        newWriteTime = lastWriteTime;
                     }
                 }
                 Console.WriteLine("上次转换时间：" + DateTime.FromFileTimeUtc(lastWriteTime));
