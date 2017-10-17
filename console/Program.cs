@@ -121,12 +121,16 @@ namespace Convert
                         }
                     }
                 } // for
-                StreamWriter writer = new StreamWriter(inPath + @"\lastWriteTime", false);
-                writer.Write(
-                    newWriteTime
-                //newWriteTime.ToString("yyyy_MM_dd-HH_mm_ss")
-                );
-                writer.Close();
+
+                if(newWriteTime > lastWriteTime)
+                {
+                    StreamWriter writer = new StreamWriter(inPath + @"\lastWriteTime", false);
+                    writer.Write(
+                        newWriteTime
+                    );
+                    writer.Close();
+                }
+
                 if(errno > 0)
                 {
                     Console.WriteLine("转表 {0} 个错误，按 Enter 退出", errno);
